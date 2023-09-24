@@ -1,31 +1,25 @@
-
-import { SERVER_URL } from "../../settings.js"
-
-//const cachedCars = []
+import { SERVER_URL } from "../js4settings.js"
 
 export async function initAllCars() {
-  console.log("initAllCars")
-
-  const cars = await getCars()
+    console.log("initAllCars");
   
-  const listItems = cars.map(car => `
-        <li>${car.id} , ${car.brand} </li>
-    `).join("")
-    document.getElementById("cars").innerHTML = listItems //Remember XSS
+    const cars = await getCars();
+    
+    const tableBody = document.getElementById("car-rows");
+    tableBody.innerHTML = "";
+  
+    const rows = cars.map(car => `
+        <tr>
+            <td>${car.brand}</td>
+            <td>${car.model}</td>
+            <td>${car.pricePrDay}</td>
+        </tr>
+    `).join("");
+  
+    tableBody.innerHTML = rows;
 }
 
-async function getCars(){
-  const cars = await fetch(SERVER_URL).then(res=>res.json())
-  return cars
+async function getCars() {
+    const cars = await fetch(SERVER_URL).then(res => res.json());
+    return cars;
 }
-
-/*
-fetch(SERVER_URL)
-    .then(res => res.json())
-    .then(cars => {
-      const listItems = cars.map(car => `
-        <li>${car.id} , ${car.brand} </li>
-    `).join("")
-    document.getElementById("cars").innerHTML = listItems //Remember
-    })
-    */

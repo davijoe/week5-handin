@@ -1,15 +1,15 @@
-import { loadHtml, renderHtml } from "/pages/js4/js4utils.js"
+import { loadHtml, renderHtml } from "./js4utils.js"
 
-import {initAllCars} from "/pages/js4/allCars/allCars.js"
-import {initFindCar} from "/pages/js4/findCar/findCar.js"
-import {initAddCar} from "/pages/js4/addCar/addCar.js"
+import {initAllCars} from "./allCars/allCars.js"
+import {initFindCar} from "./findCar/findCar.js"
+import {initAddCar} from "./addCar/initAddCar.js"
 
 window.addEventListener("load", async () => {
-    const templateAbout = await loadHtml("/pages/js4/about.html")
-    const templateAdd = await loadHtml("/pages/js4/addCar/addCar.html")
-    const templateEdit = await loadHtml("/pages/js4/editCar/editCar.html")
-    const templateFind = await loadHtml("/pages/js4/findCar/findCar.html")
-    const templateAll = await loadHtml("/pages/js4/allCars/allCars.html")
+    const templateAbout = await loadHtml("./about.html")
+    const templateAdd = await loadHtml("./addCar/addCar.html")
+    const templateEdit = await loadHtml("./editCar/editCar.html")
+    const templateFind = await loadHtml("./findCar/findCar.html")
+    const templateAll = await loadHtml("./allCars/allCars.html")
 
     document.getElementById("btns").onclick = handleButtonClicks
     renderHtml(templateAbout, "content")

@@ -5,14 +5,13 @@ export function initAddCar(){
   addCar()
 }
 
-
 async function addCar(){
   //Get Cars from form
   const car = {
-    brand :"djsjfd",
-    model : "sjdljdfskl",
-    pricePrDay :100,
-    bestDiscount :25
+    brand :"brand",
+    model : "model",
+    pricePrDay :999,
+    bestDiscount :999
   }
 
   const options = makeOptions("POST",car)
