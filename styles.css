@@ -1,0 +1,25 @@
+body {
+    font-family: Arial, sans-serif;
+}
+  
+.container {
+    max-width: 800px;
+    margin: auto;
+}
+  
+input[type="text"] {
+    margin-right: 10px;
+}
+
+#Q1, #Q3, #Q5 {
+    padding: 10px;
+    background-color: rgb(6, 52, 78);
+    color: white;
+    margin-top: 10px;
+}
+#Q2, #Q4 {
+    padding: 10px;
+    background-color: rgb(207, 207, 207);
+    color: rgb(0, 0, 0);
+    margin-top: 10px;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Data Fetch</title>
+    <link rel="stylesheet" href="../../../styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="text-center mb-4">Fetch User Data</h1>
+                <div class="input-group mb-3">
+                    <input type="text" id="userId" class="form-control" placeholder="Enter User ID">
+                    <button class="btn btn-primary" onclick="getUser()">Get User</button>
+                    <button class="btn btn-secondary" onclick="getAllUsers()">Get All Users</button>
+                </div>
+                <table id="userTable" class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Phone</th>
+                        <th>Street</th>
+                        <th>City</th>
+                        <th>Zip</th>
+                        <th>Geo</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                </tbody>
+                </table>
+            </div>
+        </div><br><br><br>
+        <div id="Q1" class="question-div"><h3>Q1: What is a promise?</h3>
+            A Promise is a JS object represents eventual completion or failure of an async operation.
+            <br>It's a way to handle tasks that might take time, like fetching data.
+        </div>
+        <div id="Q2" class="question-div"><h3>Q2: What does the fetch method return?</h3>
+            fetch gives you a Promise that will eventually give you the server's response.
+        </div>
+        <div id="Q3" class="question-div"><h3>Q3: Why do we need to have two .then callbacks with our fetch code?</h3>
+            The first .then() turns the server's response into usable data. The second .then() lets you work with that data.
+        </div>
+        <div id="Q4" class="question-div"><h3>Q4: What can and should you do in the first?
+        </h3>
+            In the first .then(), you make the server's response readable by turning it into JSON.
+        </div>
+        <div id="Q5" class="question-div"><h3>Q5: What can and should you do in the last?</h3>
+            In the second .then(), you use the data to update your webpage or do other tasks.
+        </div>
+    </div>
+
+
+    <script src="./ex1.js"></script>
+</body>
+</html>
